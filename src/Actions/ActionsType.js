@@ -1,0 +1,10 @@
+export const ADD_ACTIVITY = 'ADD_ACTIVITY';
+export const REMOVE_ACTIVITY = 'REMOVE_ACTIVITY';
+export const GET_COUNTRIES = 'GET_COUNTRIES'; 
+export const GET_DETAILS = 'GET_DETAILS';
+export const GET_COUNTRY ='GET_COUNTRY';
+export const GET_CONTINENT = 'GET_CONTINENT';
+export const GET_ACTIVITIES = 'GET_ACTIVITIES';
+export const GET_AZ = 'GET_AZ';
+export const GET_POP = 'GET_POP';
+export const GET_COUNTBYACT ='GET_COUNTBYACT';

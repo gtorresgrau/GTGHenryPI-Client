@@ -1,0 +1,103 @@
+.container{
+    background-image: url('../img/newWorld2.jpg');
+    background-size:cover;
+    background-attachment:fixed;
+    font-family: 'Manjari', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.container .header,
+.container .navigate,
+.container .filters,
+.container .paginado,
+.container .cards{
+    grid-column: 1/4;
+}
+.home .navigate{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* .container .header,
+.container .paginado,
+.container .footer{
+    background-image: url('../img/header.jpg');
+} */
+
+.filters{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.sort,
+.select{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+    color: #3fa4e8;
+    align-items:center;
+    align-content: space-between;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.sort .mm,
+.sort .az{
+    display: grid;
+}
+
+.sort .select:hover{
+    color: #212ee5;
+    font-size: medium;
+}
+
+.cards{
+    font-family: 'Manjari', sans-serif;
+    margin: 1rem;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 10em;
+    justify-content: space-around;
+    align-content: top;  
+    align-items: initial;
+    margin: auto
+}
+
+@media screen and (max-width:1000px){
+    .container .cards{
+    grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width:850px){
+    .container .cards{
+    grid-template-columns: repeat(3, 1fr);
+    }
+    .home .sort,
+    .home .sort{
+        grid-column: 1/-1;
+        cursor: pointer;
+        margin-bottom: 10px;
+        color: #3fa4e8;
+    }
+}
+
+@media screen and (max-width:650px){
+    .container .cards{
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width:550px){
+    .home .sort{
+        grid-column: 1/-1;
+        cursor: pointer;
+        margin-bottom: 10px;
+        color: #3fa4e8;
+        align-items:initial;
+        align-content: center;
+    }
+    .container .filters,
+    .container .cards{
+    grid-template-columns: repeat(1, 4fr);
+    }
+}

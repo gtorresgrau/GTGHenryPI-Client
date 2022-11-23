@@ -1,0 +1,15 @@
+.App {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Manjari', sans-serif;
+  background-image:url('./Components/img/pangea2.jpg');    
+  background-color: #040203;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment:fixed;
+  transition: 1s;
+  backdrop-filter: blur(5px);
+}

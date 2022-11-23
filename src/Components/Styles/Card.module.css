@@ -1,0 +1,36 @@
+.card{
+    font-family: 'Manjari', sans-serif;
+    align-content: center;
+    align-items: initial;
+    border: 1px solid #3fa4e8;
+    border-radius: 1rem;
+    width: 210px;
+    height: 300px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    backdrop-filter: blur(10px);
+    text-decoration: none;
+    transition: all 300ms ease;
+}
+
+.card:hover{
+    box-shadow: 5px 5px 5px #ffffff;
+    transform:translateY(-3%)
+}
+
+.flag{
+    width:100% ;
+    height: 145px;
+}
+
+.hname{
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 5px 2px 5px #212ee5;
+    color: #3fa4e8 ;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
