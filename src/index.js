@@ -5,6 +5,9 @@ import {store} from './Store/index.js';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from "react-redux";
 
+
+axios.defaults.baseURL = 'gtghenrypi-api-production.up.railway.app';
+
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>

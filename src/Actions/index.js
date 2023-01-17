@@ -17,7 +17,7 @@ import {
 export function getCountries(){
     return async function(dispatch){
         try{
-            let allcountries = await axios(`http://localhost:3001/countries`);
+            let allcountries = await axios(`/countries`);
             //console.log(allcountries.data)
                 return dispatch({
                     type: GET_COUNTRIES,
@@ -25,7 +25,7 @@ export function getCountries(){
                 })
         }
         catch(e){
-            window.location.href = "http://localhost:3000/countries/";
+            window.location.href = "/countries/";
             alert(`Something happened when fetching the data from the Server, try to refresh the web`)
         }
     }
@@ -51,14 +51,14 @@ export function sortPop(payload){
 export function getCountriesByName(name){
     return async function(dispatch){
         try{
-            let getCountry = await axios(`http://localhost:3001/countries?name=${name}`);
+            let getCountry = await axios(`/countries?name=${name}`);
                 return dispatch({
                     type: GET_COUNTRY,
                     payload: getCountry.data
                 })
         }
         catch(e){
-            window.location.href = "http://localhost:3000/countries/";
+            window.location.href = "/countries/";
             console.log(`There are no Countries with the combination of Characters entered: ${name}`)
             alert(`There are no Countries with the combination of Characters entered: ${name}`)
         }
@@ -67,8 +67,8 @@ export function getCountriesByName(name){
 
 export function filterByContinent(payload){
     return async function(dispatch){
-        if(payload === 'world') { var urlBack = `http://localhost:3001/countries`}
-        else{ urlBack = `http://localhost:3001/countries/continent/${payload}`}
+        if(payload === 'world') { var urlBack = `/countries`}
+        else{ urlBack = `/countries/continent/${payload}`}
         try{                
             let getContinent = await axios(urlBack);
                 return dispatch({
@@ -78,7 +78,7 @@ export function filterByContinent(payload){
             
             }
             catch(e){
-                window.location.href = "http://localhost:3000/countries/";
+                window.location.href = "/countries/";
                 console.log(`Something happened when filtering by continent: ${payload}`)
                 alert(`Something happened when filtering by continent: ${payload}`)
             }
@@ -89,7 +89,7 @@ export function filterByContinent(payload){
 
 export function getActivities(){
     return async function(dispatch){
-        const activities = await axios(`http://localhost:3001/activities`);
+        const activities = await axios(`/activities`);
         return dispatch({
             type: GET_ACTIVITIES,
             payload: activities.data
@@ -109,7 +109,7 @@ export function getCountActivities(payload){
 
 export function addActivity(payload){
     return async function(){
-        const add = await axios.post(`http://localhost:3001/activities`, payload)
+        const add = await axios.post(`/activities`, payload)
         return add;
     }
 };
@@ -119,14 +119,14 @@ export function addActivity(payload){
 export function details(id){
     return async function(dispatch){
         try{
-            const info = await axios(`http://localhost:3001/countries/${id}`);
+            const info = await axios(`/countries/${id}`);
             return dispatch({
                 type: GET_DETAILS,
                 payload: info.data
             })
         }
         catch(e){
-            window.location.href = "http://localhost:3000/countries/";
+            window.location.href = "/countries";
             console.log(`Something happened when filtering by id: ${id}`)
             alert(`Something happened when filtering by id: ${id}`)
         }
