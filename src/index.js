@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import axios from 'axios';
 import {store} from './Store/index.js';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from "react-redux";
 
 
-axios.defaults.baseURL = 'gtghenrypi-api-production.up.railway.app';
+axios.defaults.baseURL = "gtghenrypi-api-production.up.railway.app/";
 
 ReactDOM.render(
   <Provider store={store}>
