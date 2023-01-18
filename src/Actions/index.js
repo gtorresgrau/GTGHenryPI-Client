@@ -17,8 +17,8 @@ import {
 export function getCountries(){
     return async function(dispatch){
         try{
-            let allcountries = await axios(`/countries`);
-            //console.log(allcountries.data)
+            let allcountries = await axios.get(`/countries`);
+            console.log(allcountries.data)
                 return dispatch({
                     type: GET_COUNTRIES,
                     payload: allcountries.data

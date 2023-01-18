@@ -2,18 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import axios from 'axios';
+import { BrowserRouter } from 'react-router-dom';
 import {store} from './Store/index.js';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from "react-redux";
 
-
+//axios.defaults.baseURL = "http://localhost:3000/";
 axios.defaults.baseURL = "gtghenrypi-api-production.up.railway.app/";
 
 ReactDOM.render(
   <Provider store={store}>
-    <React.StrictMode>
+    <BrowserRouter>
       <App />
-    </React.StrictMode>,
+    </BrowserRouter>,
   </Provider>,
 document.getElementById('root')
 );
