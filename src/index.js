@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from "react-redux";
 
 //axios.defaults.baseURL = "http://localhost:3000/";
-axios.defaults.baseURL = "http://gtghenrypi-api-production.up.railway.app/";
+axios.defaults.baseURL = "https://gtghenrypi-api-production.up.railway.app/";
 
 ReactDOM.render(
   <Provider store={store}>
